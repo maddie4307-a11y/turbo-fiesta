@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Skystar Pierre | Movie Database</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#121212;
+    color:white;
+}
+
+header{
+    background:#1d1d1d;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid #f5c518;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#f5c518;
+}
+
+.search{
+    width:45%;
+}
+
+.search input{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:none;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:320px 1fr 320px;
+    gap:30px;
+    padding:40px;
+}
+
+.left img{
+    width:100%;
+    border-radius:12px;
+}
+
+.card{
+    background:#1d1d1d;
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+h1{
+    font-size:52px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#cccccc;
+    margin-bottom:25px;
+}
+
+.bio{
+    line-height:1.8;
+    color:#ddd;
+}
+
+.section-title{
+    color:#f5c518;
+    margin:40px 0 20px;
+    font-size:28px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+tr{
+    border-bottom:1px solid #333;
+}
+
+td{
+    padding:16px 0;
+}
+
+.movie{
+    color:#6ab0ff;
+}
+
+.role{
+    color:#ddd;
+}
+
+.year{
+    text-align:right;
+    color:#999;
+}
+
+.knownfor{
+    display:grid;
+    gap:18px;
+}
+
+.poster{
+    background:#242424;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.poster img{
+    width:100%;
+    display:block;
+}
+
+.poster h3{
+    padding:12px;
+}
+
+.poster p{
+    padding:0 12px 12px;
+    color:#bbb;
+}
+
+.stats{
+    font-size:18px;
+    line-height:2;
+}
+
+footer{
+    margin-top:50px;
+    padding:25px;
+    text-align:center;
+    color:#777;
+}
+
+button{
+    background:#f5c518;
+    color:black;
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+button:hover{
+    background:#ffd84d;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+MovieDB
+</div>
+
+<div class="search">
+<input placeholder="Search actors, movies...">
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="left">
+
+<img src="https://via.placeholder.com/320x470?text=Portrait">
+
+<div class="card">
+
+<h3>Personal Details</h3>
+
+<br>
+
+<p><strong>Born</strong></p>
+<p>December 12, 1997</p>
+
+<br>
+
+<p><strong>Height</strong></p>
+<p>6 ft 2 in (188 cm)</p>
+
+<br>
+
+<p><strong>Occupation</strong></p>
+<p>Actress • Producer • Writer</p>
+
+</div>
+
+</div>
+
+<div>
+
+<h1>Skystar Pierre</h1>
+
+<div class="subtitle">
+Actress • Producer • Writer
+</div>
+
+<p class="bio">
+
+Skystar Pierre is a fictional actress, producer, and writer known for
+fantasy, thriller, and dramatic films. She has appeared in projects
+including <strong>The Desperate Princess</strong>,
+<strong>Whorp</strong>,
+<strong>Sleep Study</strong>,
+and
+<strong>Psycho Killer</strong>.
+
+</p>
+
+<h2 class="section-title">
+Filmography
+</h2>
+
+<table>
+
+<tr>
+<td class="movie">Psycho Killer</td>
+<td class="role">Lead Role</td>
+<td class="year">Upcoming</td>
+</tr>
+
+<tr>
+<td class="movie">Whorp</td>
+<td class="role">Olivia</td>
+<td class="year">2026</td>
+</tr>
+
+<tr>
+<td class="movie">Sleep Study</td>
+<td class="role">Maeve</td>
+<td class="year">2024</td>
+</tr>
+
+<tr>
+<td class="movie">The Desperate Princess</td>
+<td class="role">Cinderella</td>
+<td class="year">2024–Present</td>
+</tr>
+
+</table>
+
+<button onclick="showCredits()">
+Show More Credits
+</button>
+
+<div id="credits"></div>
+
+</div>
+
+<div>
+
+<div class="card">
+
+<h2>Known For</h2>
+
+<div class="knownfor">
+
+<div class="poster">
+<img src="https://via.placeholder.com/280x420?text=The+Desperate+Princess">
+<h3>The Desperate Princess</h3>
+<p>Cinderella</p>
+</div>
+
+<div class="poster">
+<img src="https://via.placeholder.com/280x420?text=Whorp">
+<h3>Whorp</h3>
+<p>Olivia</p>
+</div>
+
+<div class="poster">
+<img src="https://via.placeholder.com/280x420?text=Sleep+Study">
+<h3>Sleep Study</h3>
+<p>Maeve</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Career Stats</h2>
+
+<div class="stats">
+
+Credits: 12<br>
+Movies: 8<br>
+TV Series: 4<br>
+Producer Credits: 3<br>
+Writer Credits: 2
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+Original movie-profile demo inspired by online film databases.
+
+</footer>
+
+<script>
+
+function showCredits(){
+
+document.getElementById("credits").innerHTML=
+
+`
+<h2 class="section-title">Additional Credits</h2>
+
+<table>
+
+<tr>
+<td class="movie">The East Wing</td>
+<td class="role">Guest Star</td>
+<td class="year">2023</td>
+</tr>
+
+<tr>
+<td class="movie">American Horror Story</td>
+<td class="role">Supporting</td>
+<td class="year">2022</td>
+</tr>
+
+<tr>
+<td class="movie">Fantastic Beasts</td>
+<td class="role">Guest Appearance</td>
+<td class="year">2021</td>
+</tr>
+
+</table>
+`;
+
+}
+
+</script>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f3f3f3;
+        color: #111;
+    }
+
+    header {
+        background: #121212;
+        color: white;
+        padding: 15px 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    .imdb-logo {
+        background: #f5c518;
+        color: #000;
+        font-weight: bold;
+        padding: 8px;
+        font-size: 26px;
+        margin-right: 25px;
+    }
+
+    .search {
+        background: white;
+        padding: 10px;
+        width: 350px;
+        border-radius: 4px;
+    }
+
+    .container {
+        width: 85%;
+        margin: 30px auto;
+        background: white;
+        padding: 30px;
+    }
+
+    .profile {
+        display: flex;
+        gap: 30px;
+    }
+
+    .photo {
+        width: 220px;
+        height: 300px;
+        background: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 8px;
+    }
+
+    .rating {
+        background: #f5c518;
+        padding: 12px;
+        display: inline-block;
+        font-weight: bold;
+    }
+
+    .award {
+        background: #fafafa;
+        border-left: 5px solid #f5c518;
+        padding: 15px;
+        margin: 12px 0;
+    }
+
+    .movie {
+        margin: 10px 0;
+    }
+</style>
+
+<div class="container">
+
+<div class="profile">
+
+<div class="photo">
+    Skystar Pierre Photo
+</div>
+
+<div>
+<h1>Skystar Pierre</h1>
+
+<p><b>Actress • Producer • Executive</b></p>
+
+<p>
+Skystar Pierre is a fictional Hollywood actress and entertainment executive
+known for roles in fantasy, thriller, and dramatic productions.
+</p>
+
+<div class="rating">
+IMDb Rating: 8.7/10
+</div>
+
+<p>
+<b>Born:</b> December 12, 1997<br>
+<b>Height:</b> 6'2"<br>
+<b>Known For:</b> The Desperate Princess, Whorp, The East Wing
+</p>
+
+</div>
+
+</div>
+
+
+<h2>Known For</h2>
+
+<div class="movie">
+⭐ <b>The Desperate Princess</b> (2024–Present)<br>
+Role: Cinderella
+</div>
+
+<div class="movie">
+⭐ <b>Whorp</b> (2026)<br>
+Role: Olivia
+</div>
+
+<div class="movie">
+⭐ <b>The East Wing (The White House)</b><br>
+Role: Lead Character
+</div>
+
+
+<h2>Awards</h2>
+
+<div class="award">
+🏆 <b>The Oscars (Mock)</b><br>
+Best Actress — Winner<br>
+<i>2024, 2025, 2026</i>
+</div>
+
+
+🏆 <b>Academy Awards (Mock)</b><br>
+Best Actress — Winner<br>
+<i>The Desperate Princess</i>
+</div>
+
+<div class="award">
+🏆 <b>Golden Globe Awards (Mock)</b><br>
+Best Performance by an Actress in a Television Series — Winner<br>
+<i>The Desperate Princess</i>
+</div>
+
+<div class="award">
+🏆 <b>Screen Actors Guild Awards (Mock)</b><br>
+Outstanding Performance by a Female Actor — Winner
+</div>
+
+<div class="award">
+🏆 <b>Critics Choice Awards (Mock)</b><br>
+Best Fantasy Actress — Winner<br>
+<i>Whorp</i>
+</div>
+
+<div class="award">
+🏆 <b>Hollywood Film Festival (Mock)</b><br>
+Entertainment Icon Award — Honoree
+</div>
+
+
+<h2>Filmography</h2>
+
+<ul>
+<li>The Desperate Princess (2024–Present)</li>
+<li>Whorp (2026)</li>
+<li>Harry Potter: Fantastic Beasts and Where to Find Them</li>
+<li>American Horror Story: Bunker</li>
+<li>Nancy Drew</li>
+</ul>
+
+
+<h2>Personal Details</h2>
+
+<p>
+Full Name: Skystar Chanel Pierre<br>
+Profession: Actress / Hollywood Executive Producer<br>
+Birthplace: Amsterdam (fictional biography)<br>
+</p>
+
+</div>
+
+</body>
+  </html>
+  
